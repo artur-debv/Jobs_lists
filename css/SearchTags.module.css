@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content{
+    
+}
+
+.Search_box{
+    display: block;
+    position: absolute;
+    top: 120px;
+    left: 20%;
+    height: 50px;
+    width: 50%;
+    padding-left: 10px;
+    border: none;
+    border-radius: 6px;
+}
+

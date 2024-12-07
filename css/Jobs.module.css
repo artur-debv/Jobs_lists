@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .jobListings {
     display: flex;
@@ -5,6 +10,7 @@
     gap: 24px;
     padding: 24px;
     background-color: #effafa; 
+    margin-top: -10px;
   }
 
   .content{
@@ -12,7 +18,6 @@
     gap: 10px;
   }
   
-
   .jobCard {
     display: flex;
     gap: 16px;
