@@ -1,0 +1,129 @@
+
+.jobListings {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    background-color: #effafa; 
+  }
+
+  .content{
+    display: flex;
+    gap: 10px;
+  }
+  
+
+  .jobCard {
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid transparent;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+
+  .featured {
+    border-left-color: hsl(180, 29%, 50%);
+  }
+  
+
+  .jobCard:hover {
+    transform: scale(1.02); 
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .jobCardHeader {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  
+  .jobLogo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+  
+  
+  .jobInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+  }
+  
+  .companyInfo {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  
+  .companyName {
+    font-size: 18px;
+    font-weight: bold;
+    color: hsl(180, 29%, 50%);
+  }
+  
+  
+  .badge {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 12px;
+    text-transform: uppercase;
+    color: white;
+  }
+  
+  .new {
+    background-color: hsl(180, 29%, 50%);
+  }
+  
+
+
+  .jobPosition {
+    font-size: 18px;
+    font-weight: bold;
+    color: hsl(180, 8%, 52%);
+  }
+  
+ 
+  .jobDetails {
+    font-size: 14px;
+    color: hsl(180, 8%, 52%);
+  }
+  
+  
+  .jobTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  
+ 
+  .tag {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: hsl(180, 31%, 95%);
+    color: hsl(180, 29%, 50%);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    height: 30px;
+  }
+  
+  
+  .tag:hover {
+    background-color: hsl(180, 29%, 50%);
+    color: white;
+  }
+  
