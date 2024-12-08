@@ -1,9 +1,15 @@
 import React from 'react';
 import Data from '../json/Data.json';
 import styles from '../css/Jobs.module.css';
-
+import { useTag } from './Context/TagContext';
 
 export function JobsContent() {
+  const { addTag } = useTag();
+
+  const handleTagClick = (tag) => {
+    addTag(tag);
+  };
+
   return (
     <div className={styles.jobListings}>
       {Data.map((job) => (
@@ -33,15 +39,15 @@ export function JobsContent() {
             </div>
           </div>
           <div className={styles.jobTags}>
-            <span className={styles.tag}>{job.role}</span>
-            <span className={styles.tag}>{job.level}</span>
+            <span className={styles.tag} onClick={() => handleTagClick(job.role)}>{job.role}</span>
+            <span className={styles.tag} onClick={() => handleTagClick(job.level)}>{job.level}</span>
             {job.languages.map((language, index) => (
-              <span key={index} className={styles.tag}>
+              <span key={index} className={styles.tag} onClick={() => handleTagClick(language)}>
                 {language}
               </span>
             ))}
             {job.tools.map((tool, index) => (
-              <span key={index} className={styles.tag}>
+              <span key={index} className={styles.tag} onClick={() => handleTagClick(tool)}>
                 {tool}
               </span>
             ))}

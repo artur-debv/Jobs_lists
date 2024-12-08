@@ -1,10 +1,13 @@
 
 import styles from '../css/SearchTags.module.css';
+import { useTag } from './Context/TagContext';
+export function SearchTags() {
 
-export function SearchTags(){
-    return(
+    const { tag } = useTag();
+
+    return (
         <div className={styles.content}>
-            <input type="text" className={styles.Search_box} placeholder='Buscar Empregos' />
+            <input type="text" value={tag} className={styles.Search_box} placeholder='Buscar Empregos' />
         </div>
     )
-}
+} 
