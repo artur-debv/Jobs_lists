@@ -7,7 +7,6 @@ export function SearchTags() {
 
     function handleDeleteTag(tagToRemove) {
         removeTag(tagToRemove);
-        console.log('Tag removida:', tagToRemove);
     }
 
     return (
