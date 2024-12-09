@@ -6,14 +6,14 @@ export function SearchTags() {
 
     return (
         <div className={styles.content}>
-            {/* Input onde o usuário digita */}
+            
             <input
                 type="text"
                 readOnly
                 className={styles.Search_box}
             />
 
-            {/* Exibição das tags separadas */}
+           
             <div className={styles.tagContainer}>
                 {tag.map((singleTag, index) => (
                     <>
