@@ -15,7 +15,6 @@ export function SearchTags() {
             <input
                 type="text"
                 readOnly
-                value={tag.join(', ')}
                 className={styles.Search_box}
             />
 
