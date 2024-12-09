@@ -2,28 +2,39 @@ import styles from '../css/SearchTags.module.css';
 import { useTag } from './Context/TagContext';
 
 export function SearchTags() {
-    const { tag } = useTag(); // `tag` é um array de tags, ex: ["tag1", "tag2"]
+    const { tag, removeTag } = useTag();
+
+
+    function handleDeleteTag(tagToRemove) {
+        removeTag(tagToRemove);
+        console.log('Tag removida:', tagToRemove);
+    }
 
     return (
         <div className={styles.content}>
-            
+            {/* Mostra as tags no input como texto */}
             <input
                 type="text"
                 readOnly
+                value={tag.join(', ')}
                 className={styles.Search_box}
             />
 
-           
+
             <div className={styles.tagContainer}>
                 {tag.map((singleTag, index) => (
-                    <>
-                    <span key={index} className={styles.span_tag}>
-                        {singleTag}
-                    </span>
-                    <div>
-                        <button type='submit' className={styles.buttonRemoveTag}>X</button>
+                    <div key={index} className={styles.tagWrapper}>
+                        <span className={styles.span_tag}>
+                            {singleTag}
+                        </span>
+                        <button
+                            onClick={() => handleDeleteTag(singleTag)} // Passa a tag clicada
+                            type="button"
+                            className={styles.buttonRemoveTag}
+                        >
+                            X
+                        </button>
                     </div>
-                    </>
                 ))}
             </div>
         </div>
