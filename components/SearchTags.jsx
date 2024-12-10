@@ -9,6 +9,8 @@ export function SearchTags() {
         removeTag(tagToRemove);
     }
 
+  
+
     return (
         <div className={styles.content}>
             <input
@@ -17,13 +19,13 @@ export function SearchTags() {
                 className={styles.Search_box}
             />
             <div className={styles.tagContainer}>
-                {tag.map((singleTag, index) => (
+                {tag.map((tag, index) => (
                     <div key={index} className={styles.tagWrapper}>
                         <span className={styles.span_tag}>
-                            {singleTag}
+                            {tag}
                         </span>
                         <button
-                            onClick={() => handleDeleteTag(singleTag)} // Passa a tag clicada
+                            onClick={() => handleDeleteTag(tag)} 
                             type="button"
                             className={styles.buttonRemoveTag}
                         >
