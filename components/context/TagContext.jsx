@@ -6,7 +6,6 @@ const TagContext = createContext();
 export function TagProvider({ children }) {
     const [tag, setTags] = useState([]); // Estado inicial para as tags
 
-    // Função para adicionar uma tag
     const addTag = (newTag) => {
         setTags((prevTags) => {
             if (!prevTags.includes(newTag)) {
@@ -16,7 +15,6 @@ export function TagProvider({ children }) {
         });
     };
 
-    // Função para remover uma tag
     const removeTag = (tagToRemove) => {
         setTags((prevTags) => prevTags.filter((singleTag) => singleTag !== tagToRemove));
     };
