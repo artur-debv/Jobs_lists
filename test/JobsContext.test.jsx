@@ -2,6 +2,7 @@ import { screen, render, fireEvent } from "@testing-library/react";
 import { JobsContent } from "../components/JobsContent";
 import { TagProvider } from "../components/Context/TagContext";
 import { useTag } from "../components/Context/TagContext";
+import { useEffect } from "react";
 describe("JobsContent", () => {
     it('should render the JobsContent', () => {
         render(
@@ -22,8 +23,11 @@ describe("JobsContent", () => {
         const context = screen.getByText('Manage')
         expect(context).toBeInTheDocument();
         const AddTagComponent = () => {
-            const { addTag } = useTag()
-            addTag('Frontend')
+            const { addTag } = useTag();
+            useEffect(() => {
+                addTag('Frontend');
+            }, [addTag]);
+
         }
         render(
             <TagProvider>
